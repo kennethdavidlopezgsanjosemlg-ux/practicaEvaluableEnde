@@ -60,7 +60,7 @@ public abstract class DronGenerico {
 	 * Método abstracto que se implementara en cada tipo de dron específico, que
 	 * indica el tiempo de respuesta
 	 */
-	public abstract void tiempoRespuesta();
+	public abstract void tiempoRespuesta(int distanciaMision);
 
 	// Getters y Setters
 
