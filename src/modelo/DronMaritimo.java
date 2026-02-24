@@ -40,27 +40,25 @@ public class DronMaritimo extends DronGenerico {
 	@Override
 	public void tiempoRespuesta(int distanciaMision) {
 
-		if (!this.isEstadoDron()) {
-			System.out.println("El dron no esta operativo");
-			return;
-
-		}
+		this.comprobarEstado();
 
 		if (distanciaMision < 0) {
 			throw new IllegalStateException("La distancia de la misión no puede ser negativa");
 		}
 
-		int tiempo = distanciaMision / this.getVelocityMax();
+		double tiempo = (double) distanciaMision / this.getVelocityMax();
 
 		if (this.resistenciaSalinidad < 30) {
 			tiempo *= 1.20;
 
 		}
 
-		if (tiempo < this.getAutonomiaMax()) {
+		if (tiempo > this.getAutonomiaMax()) {
 			throw new IllegalStateException("El tiempo de mision no puede ser menor a la autonomía del dron");
 
 		}
+
+		System.out.println("Misión correcta. Tiempo estimado: " + tiempo + " minutos.");
 
 	}
 
