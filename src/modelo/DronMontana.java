@@ -1,9 +1,17 @@
 package modelo;
 
+/**
+ * Clase que representa el tipo de dron montaña. Esta clase extiende de
+ * {@link DronGenerico} e incluye la estructura del dron montaña vuelo.
+ * 
+ * @author kenneth
+ * @version 1.0
+ * @since 24-02-2026
+ */
 public class DronMontana extends DronGenerico {
 	/**
-	 * Varible que indica la altitud en al puede volar en dron, tiene que ser mayor
-	 * a 0
+	 * Varible que indica la altitud máxima del dron, tiene que ser mayor a 0 y se
+	 * calcula en metros
 	 */
 	private int altitud;
 
@@ -21,9 +29,18 @@ public class DronMontana extends DronGenerico {
 		this.altitud = altitud;
 	}
 
+	/**
+	 * Calcula el tiempo de respuesta considerando la altitud de la misión.
+	 * 
+	 * @param distanciaMision - La distancia de la misión en kilómetros
+	 * 
+	 * @throws IllegalStateException    Si el dron no está operativo o si el tiempo
+	 *                                  calculado es mayor a la autonomía máxima del
+	 *                                  dron
+	 * @throws IllegalArgumentException Si la distancia es negativa
+	 */
 	@Override
 	public void tiempoRespuesta(int distanciaMision) {
-		// TODO Auto-generated method stub
 
 		if (!this.isEstadoDron()) {
 			System.out.println("El dron no esta operativo");
@@ -44,4 +61,23 @@ public class DronMontana extends DronGenerico {
 
 	}
 
+	// Getters y Setters
+
+	/**
+	 * Obtiene la altitud máxima del dron
+	 * 
+	 * @return La altitud en metros
+	 */
+	public int getAltitud() {
+		return altitud;
+	}
+
+	/**
+	 * Define o modifica la altitud máxima del dron.
+	 * 
+	 * @param altitud - La nueva altitud, debe ser mayor a 0.
+	 */
+	public void setAltitud(int altitud) {
+		this.altitud = altitud;
+	}
 }
