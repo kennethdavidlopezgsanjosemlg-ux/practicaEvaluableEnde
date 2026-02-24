@@ -1,7 +1,9 @@
 package modelo;
 
 /**
- * Clase hija de DronGenerico que define el tipo de dron Maritimo
+ * Clase hija de DronGenerico que define el tipo de dron Maritimo. Esta clase
+ * extiende de {@link DronGenerico} e incluye la estructura del dron marítimo
+ * vuelo.
  * 
  * @author kenneth
  * @version 0.0
