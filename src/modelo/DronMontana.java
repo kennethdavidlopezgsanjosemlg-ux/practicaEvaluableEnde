@@ -44,9 +44,9 @@ public class DronMontana extends DronGenerico {
 
 		this.comprobarEstado();
 
-		int tiempo = distanciaMision / this.getVelocityMax();
+		double tiempo = (double) distanciaMision / this.getVelocityMax();
 
-		int tiempoFinal = tiempo * altitud;
+		double tiempoFinal = tiempo * altitud;
 
 		if (tiempoFinal > this.getAutonomiaMax()) {
 			throw new IllegalStateException("El tiempo no puede ser mayor a la autonomía máx del dron");
