@@ -42,10 +42,7 @@ public class DronMontana extends DronGenerico {
 	@Override
 	public void tiempoRespuesta(int distanciaMision) {
 
-		if (!this.isEstadoDron()) {
-			System.out.println("El dron no esta operativo");
-			return;
-		}
+		this.comprobarEstado();
 
 		int tiempo = distanciaMision / this.getVelocityMax();
 
@@ -58,6 +55,8 @@ public class DronMontana extends DronGenerico {
 		if (distanciaMision < 0) {
 			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
 		}
+
+		System.out.println("Misión viable. Tiempo estimado: " + tiempo + " minutos.");
 
 	}
 
