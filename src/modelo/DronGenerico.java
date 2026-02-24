@@ -4,7 +4,7 @@ package modelo;
  * Clase principal abstracta para cada dron. Define la estructura base del dron.
  * 
  * @author kenneth
- * @version 0.0
+ * @version 1.0
  * @since 24-02-2026
  */
 public abstract class DronGenerico {
@@ -43,7 +43,7 @@ public abstract class DronGenerico {
 	public void comprobarEstado() {
 
 		if (this.estadoDron) {
-			System.out.println("Dron Operativo.");
+			System.out.print("Dron Operativo.");
 
 		} else {
 			throw new IllegalStateException("El dron no esta operativo");
@@ -60,7 +60,7 @@ public abstract class DronGenerico {
 	 * Método abstracto que se implementara en cada tipo de dron específico, que
 	 * indica el tiempo de respuesta
 	 */
-	public abstract void tiempoRespuesta();
+	public abstract void tiempoRespuesta(int distanciaMision);
 
 	// Getters y Setters
 
@@ -76,7 +76,7 @@ public abstract class DronGenerico {
 	/**
 	 * Define o modifica el identificador único del dron
 	 * 
-	 * @param id - El nuevo identificador
+	 * @param id El nuevo identificador
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -94,7 +94,7 @@ public abstract class DronGenerico {
 	/**
 	 * Define o modifica la autonomía máxima de vuelo.
 	 * 
-	 * @param autonomiaMax - La duración en minutos del dron
+	 * @param autonomiaMax La duración en minutos
 	 */
 	public void setAutonomiaMax(int autonomiaMax) {
 		this.autonomiaMax = autonomiaMax;
@@ -134,7 +134,7 @@ public abstract class DronGenerico {
 	/**
 	 * Actualiza el estado operativo del dron
 	 * 
-	 * @param estadoDron - El nuevo estado
+	 * @param estadoDron - El nuevo estado (true para operativo).
 	 */
 	public void setEstadoDron(boolean estadoDron) {
 		this.estadoDron = estadoDron;
