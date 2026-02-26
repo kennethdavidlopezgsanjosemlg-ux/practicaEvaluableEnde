@@ -15,7 +15,7 @@ import org.junit.runners.Parameterized.Parameters;
  * 
  * @author kenneth
  * @since 26-02-2026
- * @version 1.0
+ * @version 0.0
  */
 @RunWith(Parameterized.class)
 public class DronMaritimoTestErrores {

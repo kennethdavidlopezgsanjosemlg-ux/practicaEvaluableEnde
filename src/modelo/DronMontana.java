@@ -5,7 +5,7 @@ package modelo;
  * {@link DronGenerico} e incluye la estructura del dron montaña vuelo.
  * 
  * @author kenneth
- * @version 1.0
+ * @version 0.0
  * @since 24-02-2026
  */
 public class DronMontana extends DronGenerico {

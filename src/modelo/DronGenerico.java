@@ -4,7 +4,7 @@ package modelo;
  * Clase principal abstracta para cada dron. Define la estructura base del dron.
  * 
  * @author kenneth
- * @version 1.0
+ * @version v.1.0. 
  * @since 24-02-2026
  */
 public abstract class DronGenerico {

@@ -16,6 +16,10 @@ import org.junit.runners.Parameterized.Parameters;
 /**
  * Pruebas parametrizadas para la clase {@link DronMaritimo}. Verifica el ciclo
  * de vida del dron y el tiempo de respuesta
+ * 
+ * @author kenneth
+ * @version 0.0
+ * @since 26-02-2025
  */
 @RunWith(Parameterized.class)
 public class DronMaritimoTestCompleto {
