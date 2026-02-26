@@ -58,7 +58,7 @@ public class DronMaritimo extends DronGenerico {
 
 		}
 
-		System.out.println("Misión correcta. Tiempo estimado: " + tiempo + " minutos.");
+		System.out.println("Misión con tiempo correcto. Tiempo estimado: " + tiempo + " minutos.");
 
 	}
 
