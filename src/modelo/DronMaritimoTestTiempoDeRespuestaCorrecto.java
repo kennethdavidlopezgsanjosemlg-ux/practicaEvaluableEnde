@@ -65,19 +65,12 @@ public class DronMaritimoTestTiempoDeRespuestaCorrecto {
 	 */
 	@Test
 	public void testTiempoRespuesta() {
-		// Creamos el objeto: ID 1, Autonomía 60, Velocidad 50, Operativo true,
-		// Salinidad 5
+		// Creamos el objeto con valores random
 		DronMaritimo dron = new DronMaritimo(1, 60, 50, true, 5);
 
-		if (resultadoEsperado) {
-			dron.tiempoRespuesta(distancia);
-			assertTrue("El tiempo de respuesta debería ser correcto para la distancia: " + distancia, true);
-		} else {
-			// Captura de excepción para casos de error esperados
-			Exception exception = assertThrows(Exception.class, () -> dron.tiempoRespuesta(distancia));
+		dron.tiempoRespuesta(distancia);
+		assertTrue("El tiempo de respuesta debería ser correcto para la distancia: " + distancia, true);
 
-			// Salida de error para trazabilidad del mensaje implementado
-			System.err.println("Error capturado para " + distancia + " km: " + exception.getMessage());
-		}
 	}
+
 }
