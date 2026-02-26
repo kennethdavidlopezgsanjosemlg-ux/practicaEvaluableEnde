@@ -25,7 +25,7 @@ public class DronMaritimoTestCompleto {
 	private double tiempoEsperado;
 
 	/**
-	 * Constructor parametrizado
+	 * Constructor parametrizado para la prueba completa
 	 * 
 	 * @param distancia      -Distancia a recorrer en km
 	 * @param tiempoEsperado
@@ -72,8 +72,8 @@ public class DronMaritimoTestCompleto {
 	}
 
 	/**
-	 * Coleccion de datos a veficar Parámetros de entrada para el dron marítimo:
-	 * {distancia, tiempo}
+	 * Coleccion de datos a veficar Parámetros de entrada para el dron marítimo
+	 * distancia y tiempo
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {

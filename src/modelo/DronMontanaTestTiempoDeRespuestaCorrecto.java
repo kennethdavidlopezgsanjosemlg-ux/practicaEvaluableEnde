@@ -10,7 +10,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 /**
  * Clase de pruebas unitarias parametrizadas para validar el cálculo del tiempo
- * de respuesta de la clase: {@link DronMaritimo}. Esta clase évalua los casos
+ * de respuesta de la clase: {@link DronMontana}. Esta clase évalua los casos
  * correctos
  * 
  * @author kenneth
@@ -48,8 +48,8 @@ public class DronMontanaTestTiempoDeRespuestaCorrecto {
 	 * <li>Casos normales</li>
 	 * </ul>
 	 * </p>
-	 * * @return Colección de objetos con los parámetros {distancia,
-	 * resultadoEsperado}.
+	 * * @return Colección de objetos con los parámetros distancia y
+	 * resultadoEsperado
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {

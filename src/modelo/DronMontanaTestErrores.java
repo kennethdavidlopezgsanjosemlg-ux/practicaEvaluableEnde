@@ -10,7 +10,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 /**
  * Clase de pruebas parametrizadas para validar los posible error en el cálculo
- * del tiempo de respuesta de la clase: {@link DronMaritimo}. * Se pruban estos
+ * del tiempo de respuesta de la clase: {@link DronMontana}. * Se pruban estos
  * casos: distancias negativas, poca autonomía y estado no operativo.
  * 
  * @author kenneth
@@ -52,8 +52,8 @@ public class DronMontanaTestErrores {
 		return Arrays.asList(new Object[][] { { -10, true, "La distancia de la misión no puede ser negativa" }, // valor
 																												// negativo
 				{ 1500, true, "El tiempo no puede ser mayor a la autonomía máx del dron" }, // Error por exceso
-																									// de
-																									// tiempo
+																							// de
+																							// tiempo
 				{ 20, false, "El dron no esta operativo" } // Estado del drón no operativo
 		});
 	}
@@ -66,7 +66,7 @@ public class DronMontanaTestErrores {
 	 * muestra el mensaje de error por consola.
 	 * </p>
 	 * 
-	 * * @see DronMaritimo#tiempoRespuesta(int)
+	 * * @see DronMontana#tiempoRespuesta(int)
 	 */
 	@Test
 	public void testTiempoRespuestaDebeLanzarExcepcion() {
