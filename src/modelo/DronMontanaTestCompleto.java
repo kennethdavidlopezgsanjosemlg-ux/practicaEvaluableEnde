@@ -18,7 +18,7 @@ import org.junit.runners.Parameterized.Parameters;
  * de vida del dron y el tiempo de respuesta
  */
 @RunWith(Parameterized.class)
-public class DronMaritimoTestCompleto {
+public class DronMontanaTestCompleto {
 
 	private static DronMontana dron;
 	private int distancia;
@@ -30,7 +30,7 @@ public class DronMaritimoTestCompleto {
 	 * @param distancia      -Distancia a recorrer en km
 	 * @param tiempoEsperado
 	 */
-	public DronMaritimoTestCompleto(int distancia, double tiempoEsperado) {
+	public DronMontanaTestCompleto(int distancia, double tiempoEsperado) {
 		this.distancia = distancia;
 		this.tiempoEsperado = tiempoEsperado;
 	}
@@ -40,8 +40,8 @@ public class DronMaritimoTestCompleto {
 	 */
 	@BeforeClass
 	public static void BeforeClass() {
-		dron = new DronMontana(1, 120, 10, false, 80);
-		System.out.println("Dron marítimo creado");
+		dron = new DronMontana(1, 120, 10, false, 1.5);
+		System.out.println("Dron montana creado");
 	}
 
 	/**

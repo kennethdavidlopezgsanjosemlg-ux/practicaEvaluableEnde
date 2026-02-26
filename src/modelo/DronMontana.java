@@ -13,7 +13,7 @@ public class DronMontana extends DronGenerico {
 	 * Varible que indica la altitud máxima del dron, tiene que ser mayor a 0 y se
 	 * calcula en metros
 	 */
-	private int altitud;
+	private double altitud;
 
 	/**
 	 * Constructor por defecto parametrizado para el dron montaña
@@ -24,7 +24,7 @@ public class DronMontana extends DronGenerico {
 	 * @param estadoDron   - estado operativo del dron
 	 * @param altitud      - altitud a la que pueda volar el dron
 	 */
-	public DronMontana(int id, int autonomiaMax, int velocidadMax, boolean estadoDron, int altitud) {
+	public DronMontana(int id, int autonomiaMax, int velocidadMax, boolean estadoDron, double altitud) {
 		super(id, autonomiaMax, velocidadMax, estadoDron);
 		this.altitud = altitud;
 	}
@@ -49,8 +49,8 @@ public class DronMontana extends DronGenerico {
 			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
 		}
 
-		double tiempo = (double) distanciaMision / this.getVelocityMax();
-		
+		double tiempo = distanciaMision / this.getVelocityMax();
+
 		double tiempoFinal = tiempo * altitud;
 
 		if (tiempoFinal > this.getAutonomiaMax()) {
@@ -68,7 +68,7 @@ public class DronMontana extends DronGenerico {
 	 * 
 	 * @return La altitud en metros
 	 */
-	public int getAltitud() {
+	public double getAltitud() {
 		return altitud;
 	}
 
