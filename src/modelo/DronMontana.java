@@ -39,21 +39,22 @@ public class DronMontana extends DronGenerico {
 	 *                                  dron
 	 * @throws IllegalArgumentException Si la distancia es negativa
 	 */
+
 	@Override
 	public void tiempoRespuesta(int distanciaMision) {
 
 		this.comprobarEstado();
 
-		double tiempo = (double) distanciaMision / this.getVelocityMax();
+		if (distanciaMision < 0) {
+			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
+		}
 
+		double tiempo = (double) distanciaMision / this.getVelocityMax();
+		
 		double tiempoFinal = tiempo * altitud;
 
 		if (tiempoFinal > this.getAutonomiaMax()) {
 			throw new IllegalStateException("El tiempo no puede ser mayor a la autonomía máx del dron");
-		}
-
-		if (distanciaMision < 0) {
-			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
 		}
 
 		System.out.println("Misión con tiempo correcto. Tiempo estimado: " + tiempo + " minutos.");
