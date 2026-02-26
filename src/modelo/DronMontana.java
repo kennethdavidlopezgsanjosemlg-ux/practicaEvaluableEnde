@@ -56,7 +56,7 @@ public class DronMontana extends DronGenerico {
 			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
 		}
 
-		System.out.println("Misión viable. Tiempo estimado: " + tiempo + " minutos.");
+		System.out.println("Misión con tiempo correcto. Tiempo estimado: " + tiempo + " minutos.");
 
 	}
 
