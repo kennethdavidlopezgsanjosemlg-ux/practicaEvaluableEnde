@@ -77,7 +77,7 @@ public class DronMontanaTestCompleto {
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { 10, 1.0 } });
+		return Arrays.asList(new Object[][] { { 10, 1.5 }, { 7, 1.05 }, { 5, 0.75 } });
 	}
 
 	/**
