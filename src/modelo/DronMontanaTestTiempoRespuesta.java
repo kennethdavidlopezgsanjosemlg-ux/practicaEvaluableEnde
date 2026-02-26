@@ -51,6 +51,9 @@ public class DronMontanaTestTiempoRespuesta {
 			// que estamos controlando los dos tipos de exception
 			Exception exception = assertThrows(Exception.class, () -> dron.tiempoRespuesta(distancia));
 
+			// mostramos el mensaje del error que hemos implementado en la clase
+			System.err.println("Error: " + exception.getMessage());
+
 		}
 	}
 
