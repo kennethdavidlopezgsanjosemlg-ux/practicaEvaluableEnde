@@ -41,6 +41,11 @@ public class DronMaritimoTestErrores {
 
 	/**
 	 * colección de los casos de prueba que deben producir un error.
+	 * 
+	 * <li>Casos con valor negativo</li>
+	 * <li>Caso por exceso de autonomía</li>
+	 * <li>Caso de exceso de autonomía</li>
+	 * <li>Caso de dron no operativo</li>
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {
@@ -54,7 +59,14 @@ public class DronMaritimoTestErrores {
 	}
 
 	/**
-	 * Test que verifica que el método tiempoRespuesta lance las debidas excepciones.
+	 * Test que verifica que el método tiempoRespuesta lance las debidas
+	 * excepciones.
+	 * <p>
+	 * Verifica los erroes: IllegalStateException e IllegalArgumentException y
+	 * muestra el mensaje de error por consola.
+	 * </p>
+	 * 
+	 * * @see DronMaritimo#tiempoRespuesta(int)
 	 */
 	@Test
 	public void testTiempoRespuestaDebeLanzarExcepcion() {
@@ -67,12 +79,11 @@ public class DronMaritimoTestErrores {
 		});
 
 		// verificamos que el mensaje de error es igual al de mensajeError
-		assertEquals("El mensaje de error no coincide con el mensaje lanzado", 
-				mensajeError, exception.getMessage());
+		assertEquals("El mensaje de error no coincide con el mensaje lanzado", mensajeError, exception.getMessage());
 
 		// verificamos que el mensaje del error no sea nulo
 		assertNotNull("La excepción debería tener un mensaje explicativo", exception.getMessage());
-		
+
 		// mostramos los mensajes de error
 		System.out.println("Error capturado correctamente: " + exception.getMessage());
 	}
