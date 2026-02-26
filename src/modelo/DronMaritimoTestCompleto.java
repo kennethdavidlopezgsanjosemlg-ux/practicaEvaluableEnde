@@ -40,7 +40,7 @@ public class DronMaritimoTestCompleto {
 	 */
 	@BeforeClass
 	public static void BeforeClass() {
-		dron = new DronMaritimo("DMO1", 120, 10, false, 1.5);
+		dron = new DronMaritimo(1, 120, 10, false, 80);
 		System.out.println("Dron marítimo creado");
 	}
 
@@ -77,7 +77,7 @@ public class DronMaritimoTestCompleto {
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { 10, 1.0 } });
+		return Arrays.asList(new Object[][] { { 10, 1.0 }, { 20, 2.0 }, { 5, 0.5 } });
 	}
 
 	/**
