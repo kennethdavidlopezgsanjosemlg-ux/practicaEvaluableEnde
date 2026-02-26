@@ -46,7 +46,7 @@ public class DronMaritimo extends DronGenerico {
 			throw new IllegalStateException("La distancia de la misión no puede ser negativa");
 		}
 
-		double tiempo = (double) distanciaMision / this.getVelocityMax();
+		double tiempo = (double) distanciaMision / this.getVelocidadMax();
 
 		if (this.resistenciaSalinidad < 30) {
 			tiempo *= 1.20;

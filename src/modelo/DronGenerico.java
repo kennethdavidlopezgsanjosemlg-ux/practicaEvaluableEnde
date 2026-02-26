@@ -105,7 +105,7 @@ public abstract class DronGenerico {
 	 * 
 	 * @return La velocidad máxima
 	 */
-	public int getVelocityMax() {
+	public int getVelocidadMax() {
 		return velocidadMax;
 	}
 

@@ -49,7 +49,7 @@ public class DronMontana extends DronGenerico {
 			throw new IllegalArgumentException("La distancia de la misión no puede ser negativa");
 		}
 
-		double tiempo = distanciaMision / this.getVelocityMax();
+		double tiempo = distanciaMision / this.getVelocidadMax();
 
 		double tiempoFinal = tiempo * altitud;
 
